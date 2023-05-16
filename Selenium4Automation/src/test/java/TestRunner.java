@@ -9,7 +9,7 @@ import utils.WrapWebDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "/Users/jojedava/trentia/caixa/auto-fnd-selenium/features/",
+        features = "classpath:features/",
         glue = "steps"
 )
 public class TestRunner {
