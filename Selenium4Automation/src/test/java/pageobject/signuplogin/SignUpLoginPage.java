@@ -20,7 +20,7 @@ public class SignUpLoginPage {
     @FindBy(css = "input[data-qa='signup-email']")
     private WebElement signUpEmail;
 
-    @FindBy(css = "input[data-qa='signup-email']")
+    @FindBy(css = "input[data-qa='signup-name']")
     private WebElement name;
 
     @FindBy(css = "button[data-qa='signup-button']")
