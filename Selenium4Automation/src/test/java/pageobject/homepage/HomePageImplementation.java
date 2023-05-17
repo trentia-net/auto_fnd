@@ -20,4 +20,9 @@ public class HomePageImplementation {
     public void loadHomePage(){
         this.driver.get("https://automationexercise.com/");
     }
+
+    public boolean logoutLinkIsDisplayed(){
+        return homePage.getLogoutLink().isDisplayed();
+    }
+
 }

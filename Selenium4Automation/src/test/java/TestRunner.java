@@ -10,7 +10,8 @@ import utils.WrapWebDriver;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "classpath:features/",
-        glue = "steps"
+        glue = "steps",
+        tags = "not @ignore"
 )
 public class TestRunner {
 

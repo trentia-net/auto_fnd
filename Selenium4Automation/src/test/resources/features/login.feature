@@ -9,6 +9,6 @@ Feature: Login in the the eCommerce automation exercise
   Scenario: Login with a valid user
     Given The user is on the home page
     And the user goes to the login page
-    When the user logs in with email "test@test-caixa.com" and password "1234567"
-    Then the ecommerce should show the user name on the top bar
+    When the user logs in with email "test2@test-caixa.com" and password "12345678"
+    Then the ecommerce should show the logout link on the top bar
 
