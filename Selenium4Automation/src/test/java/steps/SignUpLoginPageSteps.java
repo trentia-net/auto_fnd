@@ -16,7 +16,7 @@ public class SignUpLoginPageSteps {
     private RegisterPageImplementation registerPageImplementation;
 
     public SignUpLoginPageSteps(){
-        this.driver = WrapWebDriver.getInstance("chrome",false);
+        this.driver = WrapWebDriver.getInstance("firefox",false);
         this.sigUpLoginPageImplementation = new SignUpLoginPageImplementation(driver);
         this.registerPageImplementation = new RegisterPageImplementation(driver);
     }
