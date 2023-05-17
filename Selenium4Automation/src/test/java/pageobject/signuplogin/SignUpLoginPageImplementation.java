@@ -13,7 +13,7 @@ public class SignUpLoginPageImplementation {
     }
 
     public void fillLoginFields(String email,String password){
-        this.signUpLoginPage.getEmail().sendKeys(email);
+        this.signUpLoginPage.getLoginEmail().sendKeys(email);
         this.signUpLoginPage.getPassword().sendKeys(password);
     }
 
@@ -25,4 +25,12 @@ public class SignUpLoginPageImplementation {
         return this.signUpLoginPage.getMessage().getText();
     }
 
+    public void fillSignUpFields(String name, String email) {
+        this.signUpLoginPage.getName().sendKeys(name);
+        this.signUpLoginPage.getSignUpEmail().sendKeys(email);
+    }
+
+    public void clickOnSignUpButton(){
+        this.signUpLoginPage.getSignUpButton().click();
+    }
 }

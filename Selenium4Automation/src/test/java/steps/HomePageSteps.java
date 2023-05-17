@@ -21,7 +21,7 @@ public class HomePageSteps {
         this.homePageImplementation = new HomePageImplementation(driver);
     }
 
-    @Given("^The user is on the home page$")
+    @Given("^the user is on the home page$")
     public void theUserIsOnTheHomePage(){
         this.homePageImplementation.loadHomePage();
     }
