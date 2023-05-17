@@ -41,7 +41,7 @@ public class WrapWebDriver {
                 default:
                     break;
             }
-
+            driver.manage().window().maximize();
         } catch (Exception e) {
             throw new RuntimeException("Exception occurred in creating singleton driver instance");
         }

@@ -1,13 +1,12 @@
 package steps;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageobject.homepage.HomePageImplementation;
 import pageobject.signuplogin.SignUpLoginPageImplementation;
+import utils.RemoveAdvertisement;
 import utils.WrapWebDriver;
 
 public class HomePageSteps {
@@ -34,6 +33,7 @@ public class HomePageSteps {
     @Then("^the ecommerce should show the logout link on the top bar$")
     public void theECommerceShouldShowTheLogoutLinkOnTheTopBar() {
         Assert.assertTrue(this.homePageImplementation.logoutLinkIsDisplayed());
+        this.homePageImplementation.clickOnLogoutLink();
     }
 
 }

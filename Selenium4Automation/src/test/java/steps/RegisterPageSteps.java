@@ -6,18 +6,25 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageobject.confirmregistration.ConfirmRegistrationPage;
 import pageobject.confirmregistration.ConfirmRegistrationPageImplementation;
+import pageobject.homepage.HomePageImplementation;
 import pageobject.registerpage.RegisterPageImplementation;
+import utils.RemoveAdvertisement;
+import utils.WaitUtils;
 import utils.WrapWebDriver;
 
 public class RegisterPageSteps {
 
+
+    private WebDriver driver;
     private RegisterPageImplementation registerPageImplementation;
     private ConfirmRegistrationPageImplementation confirmRegistrationPageImplementation;
+    private HomePageImplementation homePageImplementation;
 
     public RegisterPageSteps(){
-        WebDriver driver = WrapWebDriver.getInstance("firefox", false);
+        this.driver = WrapWebDriver.getInstance("firefox", false);
         this.registerPageImplementation = new RegisterPageImplementation(driver);
         this.confirmRegistrationPageImplementation = new ConfirmRegistrationPageImplementation(driver);
+        this.homePageImplementation = new HomePageImplementation(driver);
     }
 
     @And("^the user fills the profile form$")
@@ -31,7 +38,12 @@ public class RegisterPageSteps {
     }
 
     @Then("^the ecommerce should be show the register confirmation page$")
-    public void theEcommerceShouldBeShowTheRegisterConfirmationPage() {
+    public void theEcommerceShouldBeShowTheRegisterConfirmationPage() throws InterruptedException {
         Assert.assertTrue(this.confirmRegistrationPageImplementation.titleIsDisplayed());
+        this.confirmRegistrationPageImplementation.clickOnContinueButton();
+        RemoveAdvertisement.closeDialogAdvertisement(this.driver);
+        this.homePageImplementation.waitForLogoutLink();
+        Assert.assertTrue(this.homePageImplementation.logoutLinkIsDisplayed());
+        this.homePageImplementation.clickOnDeleteAccountLink();
     }
 }

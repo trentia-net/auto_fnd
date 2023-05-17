@@ -1,11 +1,10 @@
 package pageobject.registerpage;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import utils.RemoveAdvertisement;
 
 public class RegisterPageImplementation {
 
@@ -26,13 +25,8 @@ public class RegisterPageImplementation {
         select.selectByVisibleText(visibleText);
     }
 
-    private void scroll(WebElement element){
-        Actions actions = new Actions(this.driver);
-        actions.scrollToElement(element).release().perform();
-    }
-
     public void fillsRegisterForm(){
-        this.driver.findElement(By.cssSelector("div.grippy-host")).click();
+        RemoveAdvertisement.closeBottomAdvertisement(this.driver);
         this.registerPage.getTitleMrs().click();
         this.registerPage.getPassword().sendKeys("12345678");
         this.fillDropdownByVisibleText(this.registerPage.getDateOfBirthDay(),"1");
@@ -51,7 +45,6 @@ public class RegisterPageImplementation {
     }
 
     public void clickOnCreateAccountButton(){
-        this.scroll(this.registerPage.getCreateAccountButton());
         this.registerPage.getCreateAccountButton().click();
     }
 }

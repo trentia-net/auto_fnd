@@ -8,3 +8,4 @@ Feature: Register user automation exercise
     And the user fills the profile form
     And the user clicks on the create account button
     Then the ecommerce should be show the register confirmation page
+

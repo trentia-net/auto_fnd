@@ -2,6 +2,8 @@ package pageobject.homepage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import utils.RemoveAdvertisement;
+import utils.WaitUtils;
 
 public class HomePageImplementation {
 
@@ -25,4 +27,16 @@ public class HomePageImplementation {
         return homePage.getLogoutLink().isDisplayed();
     }
 
+    public void clickOnLogoutLink() {
+        homePage.getLogoutLink().click();
+    }
+
+    public void clickOnDeleteAccountLink(){
+        homePage.getDeleteAccountLink().click();
+    }
+
+    public void waitForLogoutLink(){
+        WaitUtils wait = new WaitUtils(this.driver);
+        wait.waitUntilVisible(10,this.homePage.getLogoutLink());
+    }
 }

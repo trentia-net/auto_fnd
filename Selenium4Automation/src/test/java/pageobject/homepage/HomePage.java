@@ -11,11 +11,18 @@ public class HomePage {
     @FindBy(css = "a[href='/logout']")
     private WebElement logoutLink;
 
+    @FindBy(css = "a[href='/delete_account']")
+    private WebElement deleteAccountLink;
+
     public WebElement getSignUpLoginLink() {
         return signUpLoginLink;
     }
 
     public WebElement getLogoutLink() {
         return logoutLink;
+    }
+
+    public WebElement getDeleteAccountLink() {
+        return deleteAccountLink;
     }
 }

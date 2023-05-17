@@ -2,6 +2,7 @@ package pageobject.confirmregistration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import utils.RemoveAdvertisement;
 
 
 public class ConfirmRegistrationPageImplementation {
@@ -17,6 +18,10 @@ public class ConfirmRegistrationPageImplementation {
 
     public boolean titleIsDisplayed(){
         return this.confirmRegistrationPage.getTitle().isDisplayed();
+    }
+
+    public void clickOnContinueButton(){
+        this.confirmRegistrationPage.getContinueButton().click();
     }
 
 }
