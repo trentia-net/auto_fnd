@@ -21,7 +21,7 @@ public class RegisterPageSteps {
     private HomePageImplementation homePageImplementation;
 
     public RegisterPageSteps(){
-        this.driver = WrapWebDriver.getInstance("firefox", false);
+        this.driver = WrapWebDriver.getInstance();
         this.registerPageImplementation = new RegisterPageImplementation(driver);
         this.confirmRegistrationPageImplementation = new ConfirmRegistrationPageImplementation(driver);
         this.homePageImplementation = new HomePageImplementation(driver);

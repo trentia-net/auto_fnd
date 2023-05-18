@@ -18,6 +18,6 @@ public class TestRunner {
     @AfterClass
     public static void afterAll(){
         System.out.println("This will run after all");
-        WrapWebDriver.getInstance("firefox", false).quit();
+        WrapWebDriver.getInstance().quit();
     }
 }

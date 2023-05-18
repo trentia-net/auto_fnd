@@ -9,16 +9,40 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Properties;
 
 public class WrapWebDriver {
 
     private static WrapWebDriver instance;
+
+    private String browser;
+    private boolean remote;
     private WebDriver driver;
 
+    private void loadProperties(){
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        try (InputStream input = loader.getResourceAsStream("properties/config.properties")) {
 
-    private WrapWebDriver(String browser, Boolean remote){
+            Properties prop = new Properties();
+
+            prop.load(input);
+
+            browser = prop.getProperty("selenium.browser");
+            remote = Boolean.getBoolean(prop.getProperty("selenium.remote"));
+
+        } catch (IOException io) {
+            io.printStackTrace();
+        }
+    }
+
+    private WrapWebDriver(){
         try {
+            loadProperties();
             switch (browser) {
                 case "chrome":
                     if (remote) {
@@ -47,9 +71,9 @@ public class WrapWebDriver {
         }
     }
 
-    public static WebDriver getInstance(String browser, Boolean remote) {
+    public static WebDriver getInstance() {
         if (instance == null){
-            instance = new WrapWebDriver(browser, remote);
+            instance = new WrapWebDriver();
         }
         return instance.driver;
     }

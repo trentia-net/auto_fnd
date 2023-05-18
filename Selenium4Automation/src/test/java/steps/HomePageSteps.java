@@ -16,7 +16,7 @@ public class HomePageSteps {
     private SignUpLoginPageImplementation sigUpLoginPageImplementation;
 
     public HomePageSteps(){
-        this.driver = WrapWebDriver.getInstance("firefox",false);
+        this.driver = WrapWebDriver.getInstance();
         this.homePageImplementation = new HomePageImplementation(driver);
     }
 
