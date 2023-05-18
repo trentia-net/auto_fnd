@@ -11,7 +11,7 @@ import utils.WrapWebDriver;
 @CucumberOptions(
         features = "classpath:features/",
         glue = "steps",
-        plugin = {"json:build/reports/test-results.json","html:build/reports/test-results.html"},
+        plugin = {"json:build/reports/test-results.json","html:build/reports/test-results.html  "},
         tags = "not @ignore"
 )
 public class TestRunner {
