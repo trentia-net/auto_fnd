@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.trentia.autofnd</groupId>
-        <artifactId>trentia-autmation-foundations</artifactId>
+        <artifactId>trentia-automation-foundations</artifactId>
         <version>1.0.0</version>
     </parent>
 
@@ -16,7 +16,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <cucumber.version>7.12.0</cucumber.version>
+        <cucumber.version>7.4.1</cucumber.version>
         <junit.version>4.13.2</junit.version>
         <selenide.version>6.14.1</selenide.version>
         <selenium.version>4.9.1</selenium.version>
@@ -49,6 +49,11 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.19.0</version>
         </dependency>
     </dependencies>
 
