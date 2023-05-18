@@ -1,7 +1,5 @@
 import PageObject.*;
-import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;
-import org.openqa.selenium.By;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +30,8 @@ public class AddProductShoppingCart {
         homePageImplementation.goToShoppingCart();
         ShoppingCartImplementation shoppingCartImplementation = new ShoppingCartImplementation();
         Thread.sleep(2000);
+
         shoppingCartImplementation.validateProductsAddedOnTheShoppingCart(productNames);
-
-        Thread.sleep(5000);
-
     }
 
 }

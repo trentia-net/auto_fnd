@@ -2,7 +2,6 @@ package pageobject.signuplogin;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import utils.RemoveAdvertisement;
 
 public class SignUpLoginPageImplementation {
 

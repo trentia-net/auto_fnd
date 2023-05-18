@@ -7,7 +7,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageobject.registerpage.RegisterPageImplementation;
 import pageobject.signuplogin.SignUpLoginPageImplementation;
-import utils.RemoveAdvertisement;
 import utils.WrapWebDriver;
 
 public class SignUpLoginPageSteps {

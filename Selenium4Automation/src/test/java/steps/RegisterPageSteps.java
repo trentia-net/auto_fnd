@@ -4,12 +4,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import pageobject.confirmregistration.ConfirmRegistrationPage;
 import pageobject.confirmregistration.ConfirmRegistrationPageImplementation;
 import pageobject.homepage.HomePageImplementation;
 import pageobject.registerpage.RegisterPageImplementation;
 import utils.RemoveAdvertisement;
-import utils.WaitUtils;
 import utils.WrapWebDriver;
 
 public class RegisterPageSteps {

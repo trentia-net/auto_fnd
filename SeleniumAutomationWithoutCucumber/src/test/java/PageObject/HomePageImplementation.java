@@ -1,5 +1,7 @@
 package PageObject;
 
+import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Selenide.open;
 
 public class HomePageImplementation {

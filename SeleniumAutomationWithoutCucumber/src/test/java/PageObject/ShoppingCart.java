@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class ShoppingCart {
 
+
     private SelenideElement table;
     private List<SelenideElement> products;
 

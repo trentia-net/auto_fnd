@@ -5,15 +5,12 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageobject.homepage.HomePageImplementation;
-import pageobject.signuplogin.SignUpLoginPageImplementation;
-import utils.RemoveAdvertisement;
 import utils.WrapWebDriver;
 
 public class HomePageSteps {
 
     private WebDriver driver;
     private HomePageImplementation homePageImplementation;
-    private SignUpLoginPageImplementation sigUpLoginPageImplementation;
 
     public HomePageSteps(){
         this.driver = WrapWebDriver.getInstance();

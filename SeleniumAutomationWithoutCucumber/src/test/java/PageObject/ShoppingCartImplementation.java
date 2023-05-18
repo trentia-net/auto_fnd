@@ -24,8 +24,8 @@ public class ShoppingCartImplementation {
         }
 
     }
-
     public void waitForProductList() {
         Wait().until(ExpectedConditions.visibilityOf(this.shoppingCart.getTable().getWrappedElement()));
     }
+
 }

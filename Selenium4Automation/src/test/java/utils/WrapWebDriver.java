@@ -12,8 +12,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Properties;
 
 public class WrapWebDriver {

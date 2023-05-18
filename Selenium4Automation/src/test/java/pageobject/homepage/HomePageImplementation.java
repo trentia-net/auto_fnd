@@ -2,7 +2,6 @@ package pageobject.homepage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import utils.RemoveAdvertisement;
 import utils.WaitUtils;
 
 public class HomePageImplementation {
