@@ -25,7 +25,7 @@ public class RegisterPageImplementation {
         select.selectByVisibleText(visibleText);
     }
 
-    public void fillsRegisterForm(){
+    public void fillsRegisterForm() throws InterruptedException {
         RemoveAdvertisement.closeBottomAdvertisement(this.driver);
         this.registerPage.getTitleMrs().click();
         this.registerPage.getPassword().sendKeys("12345678");

@@ -33,7 +33,7 @@ public class WrapWebDriver {
             prop.load(input);
 
             browser = prop.getProperty("selenium.browser");
-            remote = Boolean.getBoolean(prop.getProperty("selenium.remote"));
+            remote = Boolean.valueOf(prop.getProperty("selenium.remote"));
 
         } catch (IOException io) {
             io.printStackTrace();

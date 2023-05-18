@@ -28,7 +28,7 @@ public class RegisterPageSteps {
     }
 
     @And("^the user fills the profile form$")
-    public void theUserFillsTheProfileForm() {
+    public void theUserFillsTheProfileForm() throws InterruptedException {
         this.registerPageImplementation.fillsRegisterForm();
     }
 

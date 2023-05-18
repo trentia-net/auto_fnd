@@ -1,7 +1,7 @@
 version: "3"
 services:
   chrome:
-    image: selenium/node-chrome:4.1.4-20220427
+    image: selenium/node-chrome:latest
     shm_size: 2gb
     depends_on:
       - selenium-hub
@@ -13,7 +13,7 @@ services:
       - SE_NODE_MAX_SESSIONS=5
       - SE_NODE_SESSION_TIMEOUT=180
   firefox:
-    image: selenium/node-firefox:4.1.4-20220427
+    image: selenium/node-firefox:latest
     shm_size: 2gb
     depends_on:
       - selenium-hub
