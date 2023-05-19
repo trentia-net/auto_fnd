@@ -11,3 +11,11 @@ Follow the instruction on [https://docs.cypress.io/guides/getting-started/instal
 ```console
 npx cypress open
 ```
+
+# Run all test cypress
+
+```console
+npx cypress run
+```
+
+The videos are generated automatically

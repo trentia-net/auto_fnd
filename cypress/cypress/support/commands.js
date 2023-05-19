@@ -10,7 +10,16 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('login', (email, password) => {
+    cy.viewport('macbook-11');
+    cy.visit('https://www.demoblaze.com/');
+    cy.get('#login2').click();
+    cy.wait(1000);
+    cy.get('#loginusername').type(email);
+    cy.get('#loginpassword').type(password);
+    cy.get('#logInModal .btn-primary').click();
+
+})
 //
 //
 // -- This is a child command --
